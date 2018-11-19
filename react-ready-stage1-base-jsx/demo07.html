@@ -30,14 +30,17 @@
       });
 
       var LeftNav = React.createClass({
-        var arr = ["百度","谷歌","bing"];
+      
         render:function (){
+          var arr = ["百度","谷歌","bing"];
          return(
           <div>
             <ul>
               {
                 arr.map(function(item,index){
+                 return (
                   <li key={index}>{item}</li>
+                 )
                 })
               }
             </ul>
@@ -48,10 +51,12 @@
 
       var Root = React.createClass({
          render:function(item,index){
-          <div>
+          return (
+            <div>
             <RightNav/>
             <LeftNav/>
           </div>
+          )
          }
       })
 
