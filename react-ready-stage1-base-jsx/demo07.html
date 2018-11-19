@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="dist/browser.min.js"></script>
+    <script src="dist/jquery.js"></script>
+    <script src="dist/react.js"></script>
+    <script src="dist/react-dom.js"></script>
+</head>
+
+<body>
+    <title>demo07</title>
+    <div id='root'>
+    </div>
+    <script type="text/babel">
+      var RightNav = React.createClass({
+        render:function(){
+         return(
+          <div>
+            <ul>
+              <li><a>1</a></li>
+              <li><a>1</a></li>
+              <li><a>1</a></li>
+            </ul>
+          </div>
+         )
+        }
+      });
+
+      var LeftNav = React.createClass({
+        var arr = ["百度","谷歌","bing"];
+        render:function (){
+         return(
+          <div>
+            <ul>
+              {
+                arr.map(function(item,index){
+                  <li key={index}>{item}</li>
+                })
+              }
+            </ul>
+          </div>
+         )
+        }
+      });
+
+      var Root = React.createClass({
+         render:function(item,index){
+          <div>
+            <RightNav/>
+            <LeftNav/>
+          </div>
+         }
+      })
+
+      ReactDOM.render(<Root / >,document.getElementById("root"))
+    </script>
+
+</body>
+
+</html>

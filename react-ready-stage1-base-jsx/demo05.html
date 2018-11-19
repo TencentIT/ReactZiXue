@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="dist/browser.min.js"></script>
+    <script src="dist/jquery.js"></script>
+    <script src="dist/react.js"></script>
+    <script src="dist/react-dom.js"></script>
+</head>
+
+<body>
+    <title>demo05</title>
+    <div id='root'>
+    </div>
+    <script type="text/babel">
+      function tick(){
+        var currentData = (
+          <div>
+            <h3>当前时间：</h3>
+            <p>{new Date().toLocaleString()}</p>
+          </div>
+        );
+        ReactDOM.render(currentData,
+          document.getElementById("root")
+        )
+      }
+
+     
+      setInterval(tick,1000);
+
+            
+
+    </script>
+
+</body>
+
+</html>

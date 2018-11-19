@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="dist/browser.min.js"></script>
+    <script src="dist/jquery.js"></script>
+    <script src="dist/react.js"></script>
+    <script src="dist/react-dom.js"></script>
+</head>
+
+<body>
+    <title>demo04</title>
+    <div id='root'>
+    </div>
+    <script type="text/babel">
+        var userInfo = [
+        {
+          name:"iwen",
+          age:20,
+          sex:"男"
+        },
+        {
+          name:"郭超",
+          age:20,
+          sex:"女"
+        },
+        {
+          name:"朱河锦",
+          age:20,
+          sex:"女"
+        }
+      ];
+
+      ReactDOM.render(
+        <ul>
+          {
+            userInfo.map(function(item,index){
+              return (
+                <div key={index}> 
+                  <h3>{item.name}</h3>
+                  <p>{item.sex}</p>
+                </div>
+              )
+            })
+          }
+        </ul>,
+        document.getElementById("root")
+      )
+
+            
+
+    </script>
+
+</body>
+
+</html>
